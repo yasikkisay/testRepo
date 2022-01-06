@@ -13,5 +13,6 @@ public class Main {
         List<String> items = new ArrayList<>();
         items.add("banana");
         items.add("bread");
+        items.add("egg");
     }
 }
