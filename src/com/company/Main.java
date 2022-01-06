@@ -14,5 +14,7 @@ public class Main {
         items.add("banana");
         items.add("bread");
         items.add("egg");
+
+        Customer customer1 = new Customer("Nike", "USA");
     }
 }
