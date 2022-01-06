@@ -19,5 +19,7 @@ public class Main {
 
         Map<String, String> features = new HashMap<>();
         features.put("feature-1", "the first feature for feature branch");
+
+        Feature f1 = new Feature("f1", "Test description of f1", 50);
     }
 }
