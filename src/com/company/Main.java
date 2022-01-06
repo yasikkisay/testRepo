@@ -1,7 +1,9 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -14,5 +16,8 @@ public class Main {
         items.add("banana");
         items.add("bread");
         items.add("egg");
+
+        Map<String, String> features = new HashMap<>();
+        features.put("feature-1", "the first feature for feature branch");
     }
 }
