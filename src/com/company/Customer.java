@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.List;
+
 public class Customer {
 
     public Customer() {
@@ -10,8 +12,15 @@ public class Customer {
         this.country = country;
     }
 
+    public Customer(String name, String country, List<Feature> features) {
+        this.name = name;
+        this.country = country;
+        this.features = features;
+    }
+
     private String name;
     private String country;
+    private List<Feature> features;
 
     public String getName() {
         return name;
