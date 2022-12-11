@@ -38,6 +38,14 @@ public class Customer {
         this.country = country;
     }
 
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
