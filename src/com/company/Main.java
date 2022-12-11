@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
@@ -27,5 +24,15 @@ public class Main {
         features.put("necf", new Feature("New Emergency Calling Framework", "New flow for 911 calls", 2));
         features.put("readPresenceStatus", new Feature("Read presence status", "Read presence status", 2));
 
+        Customer customer2 = new Customer("Adidas", "Germany");
+        List<Feature> customer2features = new ArrayList<Feature>(){
+            {
+                add(features.get("calls"));
+                add(features.get("sendSMS"));
+                add(features.get("receiveSMS"));
+            }
+        };
+        customer2.setFeatures(customer2features);
+        customer2.getFeatures().stream().forEach(e -> System.out.println(e.getName()));
     }
 }
