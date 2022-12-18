@@ -9,30 +9,15 @@ public class Main {
         System.out.println("Hello world! Good morning!");
         System.out.println(message);
 
-        List<String> items = new ArrayList<>();
-        items.add("banana");
-        items.add("bread");
-        items.add("egg");
+        FeatureService featureService = new FeatureService();
 
         Customer customer1 = new Customer("Nike", "USA");
-
-        Map<String, Feature> features = new HashMap<>();
-        features.put("calls", new Feature("Calls", "Ability to make calls", 1));
-        features.put("sendSMS", new Feature("Send SMS", "Ability to send SMS", 1));
-        features.put("receiveSMS", new Feature("Receive SMS", "Ability to receive SMS", 1));
-        features.put("configureAnsweringRules", new Feature("Configure Answering rules", "Ability to configure answering rules", 2));
-        features.put("necf", new Feature("New Emergency Calling Framework", "New flow for 911 calls", 2));
-        features.put("readPresenceStatus", new Feature("Read presence status", "Read presence status", 2));
+        featureService.assignFeatures(customer1);
 
         Customer customer2 = new Customer("Adidas", "Germany");
-        List<Feature> customer2features = new ArrayList<Feature>(){
-            {
-                add(features.get("calls"));
-                add(features.get("sendSMS"));
-                add(features.get("receiveSMS"));
-            }
-        };
-        customer2.setFeatures(customer2features);
-        customer2.getFeatures().stream().forEach(e -> System.out.println(e.getName()));
+        featureService.assignFeatures(customer2);
+
+        customer1.getFeatures().stream().forEach(f -> System.out.println(f.getName()));
+        customer2.getFeatures().stream().forEach(f -> System.out.println(f.getName()));
     }
 }

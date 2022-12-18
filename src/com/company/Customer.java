@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.List;
+import java.util.Set;
 
 public class Customer {
 
@@ -12,7 +13,7 @@ public class Customer {
         this.country = country;
     }
 
-    public Customer(String name, String country, List<Feature> features) {
+    public Customer(String name, String country, Set<Feature> features) {
         this.name = name;
         this.country = country;
         this.features = features;
@@ -20,7 +21,7 @@ public class Customer {
 
     private String name;
     private String country;
-    private List<Feature> features;
+    private Set<Feature> features;
 
     public String getName() {
         return name;
@@ -38,11 +39,11 @@ public class Customer {
         this.country = country;
     }
 
-    public List<Feature> getFeatures() {
+    public Set<Feature> getFeatures() {
         return features;
     }
 
-    public void setFeatures(List<Feature> features) {
+    public void setFeatures(Set<Feature> features) {
         this.features = features;
     }
 
